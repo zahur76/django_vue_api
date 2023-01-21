@@ -1,20 +1,21 @@
 $( document ).ready(function() {
 
-
     var app = new Vue({
         delimiters: ['[[', ']]'],
         el: '#home',
         data: {
-            message: 'Hello Vue!',
+            characters: null,
         },
         methods: {
-            greet() {
-                if(this.message=='Hello Vue!'){
-                    this.message = 'Hello zahur'
-                }else{
-                    this.message = 'Hello Vue!'
-                }
-                
+            get_characters() {
+                fetch(`/all_characters`).then(res =>
+                    res.json()).then(data => {
+                        console.log(data)
+                        this.characters = data;
+                })
+            },
+            get_character(id) {
+                console.log(id)
             }
         }
     });

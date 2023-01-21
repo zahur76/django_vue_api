@@ -6,14 +6,23 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="text-center text-one fw-bold">Vue API</h1>
+    <div class="h1 text-center text-one fw-bold zahur">Vue API</div>
 
     <div id="home">
-        <div class="h2 text-three text-center">Get Starwars Character</div>
-        <div class="text-center" @click="greet"><div class="btn btn-dark p-2 m-2">Press</div></div>
-        <div class="h4">[[message]]</div>
+        <div class="h2 text-one text-center">Starwars Character API</div>
+        <div class="text-center" @click="get_characters"><div class="btn btn-dark p-2 m-2">Retrieve characters</div></div>
+        <div class="text-center">
+                <div class="row m-0" v-for="character in characters">
+                    <div class="col-12 text-dark btn btn-link text-decoration-none hover" @click="get_character(character.id)">[[character.name]]</div>
+                </div>
+            </div>
+        </div>
     </div>
 
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
 {% endblock %}
 
 {% block extra_js %}              
