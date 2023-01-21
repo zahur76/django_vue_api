@@ -7,12 +7,14 @@ $( document ).ready(function() {
             characters: null,
         },
         methods: {
-            get_characters() {
-                fetch(`/all_characters`).then(res =>
-                    res.json()).then(data => {
-                        console.log(data)
-                        this.characters = data;
-                })
+            async get_characters() {
+                const response = await fetch(`/all_characters`);
+                if (!response.ok) {
+                    const message = `An error has occured: ${response.status}`;
+                    throw new Error(message);
+                }
+                const data = await response.json();
+                this.characters = data;
             },
             get_character(id) {
                 console.log(id)
