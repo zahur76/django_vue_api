@@ -1,4 +1,4 @@
-# VUE DJANGO BOILERPLATE
+# VUE DJANGO API
 
 Boilerplate for vue integration with django. 
 
