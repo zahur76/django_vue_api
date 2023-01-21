@@ -15,3 +15,12 @@ class all_characters(generics.ListAPIView):
 
     queryset = Character.objects.all()
     serializer_class = CharacterSerializer
+
+
+class get_character(generics.RetrieveAPIView):
+
+    queryset = Character.objects.all()
+    serializer_class = CharacterSerializer
+    lookup_field = "pk"
+
+

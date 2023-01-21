@@ -1,3 +1,11 @@
 .zahur {
-    color: red !important; 
+    color: rgb(105, 102, 255) !important; 
+}
+
+.character-image img{
+    width: 100%;
+}
+
+.active {
+    border-bottom: 1px solid black;
 }
