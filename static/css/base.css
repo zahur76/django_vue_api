@@ -1,3 +1,15 @@
-h1 {
-    color: purple;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=M+PLUS+Rounded+1c:wght@300&family=Maitree&family=Manuale&family=Montserrat&family=Source+Code+Pro:wght@300&display=swap');
+
+
+.text-one {
+    font-family: 'Fredoka', sans-serif;
 }
+
+.text-two {
+    font-family: 'Manuale', serif;
+}
+
+.text-three {
+    font-family: 'Maitree', serif;
+}
+

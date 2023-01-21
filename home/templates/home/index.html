@@ -6,11 +6,12 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Home Page</h1>
+    <h1 class="text-center text-one fw-bold">Vue API</h1>
 
     <div id="home">
+        <div class="h2 text-three text-center">Get Starwars Character</div>
+        <div class="text-center" @click="greet"><div class="btn btn-dark p-2 m-2">Press</div></div>
         <div class="h4">[[message]]</div>
-        <div class="btn btn-dark d-inline p-2 m-2" @click="greet">Click me</div>
     </div>
 
 {% endblock %}
